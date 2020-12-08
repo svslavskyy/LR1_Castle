@@ -35,4 +35,8 @@ public class Corridor extends Room{
     public void addConnectedRoom(Room room){
         connectedRooms.add(room);
     }
+    @Override
+    public String toString() {
+        return this.nameCoridor;
+    }
 }

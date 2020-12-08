@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.OptionalInt;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -60,20 +62,12 @@ public class Main {
         System.out.println("Average Price: " + averagePrice);
 
 
-        ArrayList<Integer> suitableArray = new ArrayList<>();
-        ArrayList<Integer> unsuitableArray = new ArrayList<>();
-
-        tower.getCorridors().stream().filter(part -> {
-            if(!part.getNameCoridor().equals("name1")){
-                unsuitableArray.add(part.getPrice());
-                return false;
-            }
-            return true;
-        }).forEach(part -> suitableArray.add(part.getPrice()));
+        var arr= tower.getCorridors().stream()
+                .collect(Collectors.groupingBy(part -> part.getNameCoridor().equals("name1")? "suitable": "unsuitable"));
 
 
-        System.out.println("Suitable Array: " + suitableArray);
-        System.out.println("Unsuitable Array: " + unsuitableArray);
+        System.out.println("Suitable: " + arr.get("suitable"));
+        System.out.println("Unsuitable: " + arr.get("unsuitable"));
 
 
         ArrayList<Tower> towerArrayList = new ArrayList<>();
