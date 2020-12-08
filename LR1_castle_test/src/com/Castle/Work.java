@@ -1,5 +1,6 @@
 package com.Castle;
 
+
 public interface Work {
     String getNameWork();
 

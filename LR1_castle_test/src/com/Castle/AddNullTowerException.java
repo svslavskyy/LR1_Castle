@@ -1,6 +1,6 @@
 package com.Castle;
 
-public class AddNullTowerException extends Throwable {
+public class AddNullTowerException extends Exception {
     AddNullTowerException() {
         super("Can`t add empty Tower!");
     }

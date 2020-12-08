@@ -1,5 +1,6 @@
 package com.Castle;
 
+
 public abstract class Room {
 
     protected float length;

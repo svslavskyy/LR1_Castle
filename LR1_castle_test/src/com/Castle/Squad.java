@@ -1,5 +1,6 @@
 package com.Castle;
 
+
 public class Squad {
     private int squadCount;
     private String squadName;
