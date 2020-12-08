@@ -62,12 +62,12 @@ public class Main {
         System.out.println("Average Price: " + averagePrice);
 
 
-        var arr= tower.getCorridors().stream()
+        var lista= tower.getCorridors().stream()
                 .collect(Collectors.groupingBy(part -> part.getNameCoridor().equals("name1")? "suitable": "unsuitable"));
 
 
-        System.out.println("Suitable: " + arr.get("suitable"));
-        System.out.println("Unsuitable: " + arr.get("unsuitable"));
+        System.out.println("Suitable: " + lista.get("suitable"));
+        System.out.println("Unsuitable: " + lista.get("unsuitable"));
 
 
         ArrayList<Tower> towerArrayList = new ArrayList<>();
