@@ -26,16 +26,4 @@ public class CastleTest {
 
     }
 
-
-
-//    @Test
-//    public void FailToCastleWithNull(){
-//
-//        Castle castle = new Castle("Null");
-//        Tower tower = null;
-//        Throwable exception = Assertions.assertThrows(AddNullTowerException.class, ()->{
-//            castle.addTower(tower);
-//        });
-//    }
-
 }

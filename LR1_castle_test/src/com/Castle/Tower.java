@@ -21,6 +21,10 @@ public class Tower {
         this.security = security;
         corridors = new ArrayList<>();
     }
+    public Tower (String towerName, ArrayList<Corridor> corridors){
+        this.towerName = towerName;
+        this.corridors = corridors;
+    }
 
     public Security getSecurity() {
         return security;
